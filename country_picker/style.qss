@@ -1,0 +1,47 @@
+QWidget {
+    background-color: #f5f9f5;
+    font-family: 'Segoe UI', Arial;
+    color: #2d3a3a;
+}
+
+QMainWindow {
+    background-color: #f9f1f1;
+}
+
+QLabel {
+    color: #428bca;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+QComboBox {
+    background-color: #ffffff;
+    border: 1px solid #a3b8a3;
+    border-radius: 8px 8px 0px 0px;
+    padding: 6px;
+    min-height: 28px;
+    font-size: 13px;
+    color: #2d3a3a;
+}
+
+QComboBox:hover {
+    border-color: #6d8b74;
+}
+
+QComboBox::drop-down {
+    width: 30px;
+    border-left: 1px solid #b8ada3;
+    background: #e8f0e8;
+}
+
+QGroupBox {
+    font: bold; border: 1px solid silver;
+    border-radius: 6px; margin: 6px;
+    background: #f9f9f9;
+    }
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 7px; padding: 0px 5px 0px 5px;
+    }
