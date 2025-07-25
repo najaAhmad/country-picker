@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from country_picker.network import CountryFetcher
+from country_picker.country_fetcher import CountryFetcher
 from unittest.mock import patch, MagicMock
 import requests
 

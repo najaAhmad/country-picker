@@ -1,0 +1,4 @@
+# MANIFEST.in
+include LICENSE
+include requirements.txt
+recursive-include country_picker/data *.json

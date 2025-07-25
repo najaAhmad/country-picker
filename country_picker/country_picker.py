@@ -24,6 +24,10 @@ from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import QThread
 from importlib.resources import files
 
+from .resources import resource_path
+
+icons_dir = resource_path(os.path.join('country_picker', 'data', 'icons'))
+
 
 class WorkerThread(QThread):
     """QThread subclass for fetching country data in the background"""
@@ -43,7 +47,7 @@ class WorkerThread(QThread):
         self.fetcher.fetch_countries()
 
 
-class MainWindow(QWidget):
+class CountryPicker(QWidget):
     """Main application window for country selection"""
     
     # Window configuration constants
@@ -101,8 +105,7 @@ class MainWindow(QWidget):
     def set_window_icon(self):
         """Set the application window icon"""
         try:
-            icon_path = str(files('country_picker.icons').joinpath('globe-icon.svg'))
-            self.setWindowIcon(QIcon(icon_path))
+            self.setWindowIcon(QIcon(os.path.join(icons_dir, 'globe-icon.svg')))
         except Exception as e:
             print(f"Error loading window icon: {e}", file=sys.stderr)
 
@@ -135,10 +138,9 @@ class MainWindow(QWidget):
     def style_dropdown(self):
         """Apply custom styling to the dropdown combobox"""
         try:
-            arrow_icon_path = str(files('country_picker.icons').joinpath('down-arrow.svg'))
             self.country_combo.setStyleSheet(f"""
                 QComboBox::down-arrow {{
-                    image: url({arrow_icon_path});
+                    image: url({os.path.join(icons_dir, 'down-arrow.svg')});
                     width: {self.ICON_SIZE}px;
                     height: {self.ICON_SIZE}px;
                 }}
@@ -165,7 +167,7 @@ class MainWindow(QWidget):
 
     def start_worker(self):
         """Initialize and start the country data fetching thread"""
-        from .network import CountryFetcher  # Local import to prevent circular dependency
+        from .country_fetcher import CountryFetcher  # Local import to prevent circular dependency
         
         self.fetcher = CountryFetcher()
         self.fetcher.data_ready.connect(self.populate_country_dropdown)
@@ -216,7 +218,6 @@ class MainWindow(QWidget):
             f"</span>"
         )
 
-
 def run_app(initial_country: Optional[str] = None):
     """
     Run the country picker application
@@ -227,11 +228,10 @@ def run_app(initial_country: Optional[str] = None):
     app = QApplication(sys.argv)
     load_stylesheet(app)
     
-    window = MainWindow(initial_country)
+    window = CountryPicker(initial_country)
     window.show()
     
     sys.exit(app.exec_())
-
 
 def load_stylesheet(app: QApplication):
     """

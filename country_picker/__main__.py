@@ -1,6 +1,5 @@
-
 import argparse
-from .app import run_app
+from .country_picker import run_app
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Country Picker Application')
