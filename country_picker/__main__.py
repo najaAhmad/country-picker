@@ -1,5 +1,5 @@
 import argparse
-from .country_picker_app import run_app
+from .app import run_app
 
 def parse_args():
     parser = argparse.ArgumentParser(description='PyQt5 Country Picker Application')

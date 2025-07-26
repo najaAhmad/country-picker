@@ -1,5 +1,5 @@
 import unittest
-from country_picker.country_fetcher import parse_countries
+from country_picker.fetcher import parse_countries
 
 class TestJsonParsing(unittest.TestCase):
     def test_parse_countries(self):

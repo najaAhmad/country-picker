@@ -6,7 +6,7 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import QThread, pyqtSignal
-from .country_fetcher import fetch_countries
+from .fetcher import fetch_countries
 from .style_loader import (
     load_stylesheet, 
     combo_custom_style,

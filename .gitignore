@@ -1,18 +1,10 @@
-# Log files
-*.log
-
 # IDE config folders
 .idea/
 .vscode/
 
-# Build outputs
-build/
-dist/
-*.egg-info/
-
 # Byte-compiled/cache files
 __pycache__/
-*.py[cod]
+*.pyc
 
 # Virtual environments
 .env/
