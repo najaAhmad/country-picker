@@ -88,7 +88,7 @@ pyqt5-country-picker/
 Run unit tests:
 
 ```bash
-python -m unittest discover tests
+python3 -m unittest discover country_picker.tests
 ```
 
 **Sample output:**
@@ -127,38 +127,8 @@ OK
 ## 🌍 API Endpoint
 
 This app uses:  
-[`https://restcountries.com/v3.1/all`](https://restcountries.com/v3.1/all)
+[`https://www.apicountries.com/countries`](https://www.apicountries.com/countries)
 
-**Sample response:**
-
-```json
-[
-  {
-    "name": {
-      "common": "Switzerland",
-      "official": "Swiss Confederation"
-    }
-  }
-]
-```
-
----
-
-## 🧩 Sample Code Snippet
-
-Background data fetching:
-
-```python
-class Worker(QObject):
-    finished = Signal(list)
-    error = Signal(str)
-
-    def fetch(self):
-        try:
-            countries = fetch_countries()
-            self.finished.emit(countries)
-        except Exception as e:
-            self.error.emit(str(e))
 ```
 
 ---

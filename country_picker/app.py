@@ -9,7 +9,6 @@ from PyQt5.QtCore import QThread, pyqtSignal
 from .fetcher import fetch_countries
 from .style_loader import (
     load_stylesheet, 
-    combo_custom_style,
     STYLESHEET_PATH,
     ICONS_DIR,
     WINDOW_WIDTH,
@@ -83,7 +82,6 @@ class CountryPickerApp(QWidget):
         
         # Create and configure country dropdown
         self.country_combo = QComboBox()
-        combo_custom_style(self.country_combo)
         self.country_combo.currentTextChanged.connect(self.update_selection_label)
         picker_layout.addWidget(self.country_combo)
         

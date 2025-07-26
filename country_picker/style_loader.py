@@ -2,7 +2,7 @@ import os, sys
 from PyQt5.QtWidgets import QApplication, QComboBox
 
 # Resource paths (using pathlib for better path handling)
-ASSETS_DIR = os.path.join(os.path.abspath("."), __package__, 'assets')
+ASSETS_DIR = os.path.join(os.path.abspath("."), 'assets')
 STYLESHEET_PATH = os.path.join(ASSETS_DIR, "styles", "style.qss")
 ICONS_DIR = os.path.join(ASSETS_DIR, "icons")
 
@@ -34,16 +34,3 @@ def load_stylesheet(app: QApplication, stylesheet_path: str) -> None:
                   file=sys.stderr)
     except Exception as e:
         print(f"Error loading stylesheet: {e}")
-
-def combo_custom_style(combo:QComboBox):
-    """Apply custom styling to the dropdown combobox"""
-    try:
-        combo.setStyleSheet(f"""
-            QComboBox::down-arrow {{
-                image: url({os.path.join(ICONS_DIR, 'down-arrow.svg')});
-                width: 25px;
-                height: 25px;
-            }}
-        """)
-    except Exception as e:
-        print(f"Error styling QComboBox: {e}")
