@@ -10,7 +10,7 @@ from .fetcher import fetch_countries
 from .style_loader import (
     load_stylesheet, 
     combo_custom_style,
-    STYLESHEET_DIR,
+    STYLESHEET_PATH,
     ICONS_DIR,
     WINDOW_WIDTH,
     WINDOW_HEIGHT,
@@ -151,7 +151,7 @@ def run_app(initial_country: Optional[str] = None):
         initial_country: Optional preselected country name
     """
     app = QApplication(sys.argv)
-    load_stylesheet(app, STYLESHEET_DIR)
+    load_stylesheet(app, STYLESHEET_PATH)
     
     window = CountryPickerApp(initial_country)
     window.show()

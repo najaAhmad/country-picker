@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QApplication, QComboBox
 
 # Resource paths (using pathlib for better path handling)
 ASSETS_DIR = os.path.join(os.path.abspath("."), __package__, 'assets')
-STYLESHEET_DIR = os.path.join(ASSETS_DIR, "styles.qss")
+STYLESHEET_PATH = os.path.join(ASSETS_DIR, "styles", "style.qss")
 ICONS_DIR = os.path.join(ASSETS_DIR, "icons")
 
 # Window configuration
