@@ -1,12 +1,19 @@
-# Build artifacts
-dist/
+# Log files
+*.log
+
+# IDE config folders
+.idea/
+.vscode/
+
+# Build outputs
 build/
+dist/
 *.egg-info/
 
-# Byte-compiled
+# Byte-compiled/cache files
 __pycache__/
-*.pyc
+*.py[cod]
 
-# Environments
+# Virtual environments
 .env/
 venv/

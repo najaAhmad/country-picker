@@ -1,8 +1,8 @@
 import argparse
-from .country_picker import run_app
+from .country_picker_app import run_app
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='Country Picker Application')
+    parser = argparse.ArgumentParser(description='PyQt5 Country Picker Application')
     parser.add_argument(
         '--select', 
         type=str, 
