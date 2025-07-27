@@ -1,8 +1,11 @@
+"""Command-line interface for Country Picker application"""
+
 import argparse
 from .app import run_app
 
 def parse_args():
-    parser = argparse.ArgumentParser(description='PyQt5 Country Picker Application')
+    """Parse CLI arguments: --select for country preselect"""
+    parser = argparse.ArgumentParser(description='Country Picker App')
     parser.add_argument(
         '--select', 
         type=str, 
@@ -11,6 +14,7 @@ def parse_args():
     return parser.parse_args()
 
 def main():
+    """Entry point: Parse args and launch app"""
     args = parse_args()
     run_app(args.select)
 

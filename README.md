@@ -56,7 +56,7 @@ python -m country_picker --select "Switzerland"
 ```
 pyqt5-country-picker/
 ├── assets/
-│   ├── icons/              # Country flag images (200+)
+│   ├── icons/              # Application icons
 │   │   ├── down-arrow.svg
 │   │   └── globe-icon.svg
 │   └── styles/

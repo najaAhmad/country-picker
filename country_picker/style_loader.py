@@ -1,5 +1,10 @@
+"""
+This module provides configuration constants and helper functions for PyQt5 applications.
+It includes resource path definitions, color palette, and stylesheet loading functionality.
+"""
+
 import os, sys
-from PyQt5.QtWidgets import QApplication, QComboBox
+from PyQt5.QtWidgets import QApplication
 
 # Resource paths
 ASSETS_DIR = os.path.join(os.path.abspath("."), 'assets')
@@ -30,7 +35,6 @@ def load_stylesheet(app: QApplication, stylesheet_path: str) -> None:
             with open(stylesheet_path, "r") as f:
                 app.setStyleSheet(f.read())
         else:
-            print(f"Stylesheet not found at {stylesheet_path}, using default styling", 
-                  file=sys.stderr)
+            print(f"Stylesheet not found at {stylesheet_path}, using default styling")
     except Exception as e:
         print(f"Error loading stylesheet: {e}")
