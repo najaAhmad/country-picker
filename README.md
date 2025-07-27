@@ -12,11 +12,9 @@ A **PyQt5** desktop application that displays countries fetched from a REST API 
 - 🌐 Fetches country data from REST API in a background thread  
 - 🔠 Displays alphabetically sorted country list in a combobox  
 - 🖥️ Real-time country selection display in a label  
-- 🧵 Thread-safe UI updates (main thread only)  
+- 🧵 Thread-safe UI updates 
 - ⚙️ CLI argument for preset country selection  
 - ✅ Unit tests for data parsing logic  
-- 📦 Modular package structure  
-- 🧩 Type hints and docstrings throughout  
 
 ---
 
@@ -91,37 +89,6 @@ Run unit tests:
 python3 -m unittest discover tests
 ```
 
-**Sample output:**
-
-```
-Ran 3 tests in 0.002s
-
-OK
-```
-
----
-
-## 🔧 Implementation Notes
-
-### 🧵 Thread Management
-
-- Background thread for network operations  
-- Main-thread-only UI updates using Qt signals  
-- Automatic thread cleanup  
-
-### ❗ Error Handling
-
-- Network request timeout (10 seconds)  
-- JSON parsing validation  
-- Graceful degradation on API failure  
-
-### 🧹 Code Quality
-
-- PEP-8 compliant  
-- Type hints for all functions  
-- Comprehensive docstrings  
-- Configurable API endpoint  
-
 ---
 
 ## 🌍 API Endpoint
@@ -134,3 +101,4 @@ This app uses:
 ## 📄 License
 
 This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
