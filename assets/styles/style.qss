@@ -1,15 +1,15 @@
 QWidget {
-    background-color: #f5f9f5;
-    font-family: 'Segoe UI', Arial;
-    color: #2d3a3a;
+    background-color: #f8fafb;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #2a3439;
 }
 
 QMainWindow {
-    background-color: #f9f1f1;
+    background-color: #f5f7f9;
 }
 
 QLabel {
-    color: #428bca;
+    color: #3a6ea5;
     font-size: 14px;
     font-weight: bold;
     padding: 5px 0;
@@ -17,38 +17,39 @@ QLabel {
 
 QComboBox {
     background-color: #ffffff;
-    border: 1px solid #a3b8a3;
-    border-radius: 8px 8px 0px 0px;
+    border: 1px solid #cbd0d3;
+    border-radius: 8px 8px 8px 8px;
     padding: 6px;
     min-height: 28px;
     font-size: 13px;
-    color: #2d3a3a;
+    color: #36454f;
 }
 
 QComboBox:hover {
-    border-color: #6d8b74;
+    border-color: #4a90e2;
+    background-color: #f8fbfd;
 }
 
 QComboBox::drop-down {
     width: 30px;
-    border-left: 1px solid #b8ada3;
-    background: #e8f0e8;
+    border-left: 1px solid #dfe4e8;
+    background: #f0f4f7;
 }
 
 QComboBox::down-arrow {
     image: url(assets/icons/down-arrow.svg);
     width: 25px;
     height: 25px;
-    subcontrol-position: right center;
 }
 
 QGroupBox {
     font: bold; border: 1px solid silver;
     border-radius: 6px; margin: 6px;
-    background: #f9f9f9;
+    background: #fcfdfe;
     }
 
 QGroupBox::title {
     subcontrol-origin: margin;
+    color: #4a6572; 
     left: 7px; padding: 0px 5px 0px 5px;
 }
