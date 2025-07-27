@@ -43,7 +43,10 @@ QComboBox::down-arrow {
 }
 
 QGroupBox {
-    font: bold; border: 1px solid silver;
+    padding: 20px 10px 10px 10px;
+    font-size: 14px;
+    font: bold;
+    border: 1px solid silver;
     border-radius: 6px; margin: 6px;
     background: #fcfdfe;
     }

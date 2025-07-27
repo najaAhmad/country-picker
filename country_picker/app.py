@@ -62,7 +62,7 @@ class CountryPickerApp(QWidget):
         
         # Main layout
         main_layout = QVBoxLayout()
-        main_layout.setContentsMargins(30, 30, 30, 30)
+        main_layout.setContentsMargins(20, 20, 20, 20)
         self.setLayout(main_layout)
         
         # Create country selection UI
@@ -73,8 +73,6 @@ class CountryPickerApp(QWidget):
         """Build country selection dropdown and display"""
         # Group container
         picker_layout = QVBoxLayout()
-        picker_layout.setContentsMargins(10, 20, 10, 10)
-        
         group_box = QGroupBox("Country Picker")
         group_box.setLayout(picker_layout)
         parent_layout.addWidget(group_box)
