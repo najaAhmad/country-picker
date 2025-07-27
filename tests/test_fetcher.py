@@ -17,7 +17,7 @@ class TestJsonParsing(unittest.TestCase):
         test_data = [
             {"name": "France", "code": "FR"},
             {"name": "Germany", "code": "DE"},
-            {"name": "Switzerland", "code": "JP"}
+            {"name": "Switzerland", "code": "CH"}
         ]
         result = parse_countries(test_data)
         self.assertEqual(result, ["France", "Germany", "Switzerland"])
