@@ -88,7 +88,7 @@ pyqt5-country-picker/
 Run unit tests:
 
 ```bash
-python3 -m unittest discover country_picker.tests
+python3 -m unittest discover tests
 ```
 
 **Sample output:**
@@ -128,8 +128,6 @@ OK
 
 This app uses:  
 [`https://www.apicountries.com/countries`](https://www.apicountries.com/countries)
-
-```
 
 ---
 
