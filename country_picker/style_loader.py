@@ -1,7 +1,7 @@
 import os, sys
 from PyQt5.QtWidgets import QApplication, QComboBox
 
-# Resource paths (using pathlib for better path handling)
+# Resource paths
 ASSETS_DIR = os.path.join(os.path.abspath("."), 'assets')
 STYLESHEET_PATH = os.path.join(ASSETS_DIR, "styles", "style.qss")
 ICONS_DIR = os.path.join(ASSETS_DIR, "icons")
